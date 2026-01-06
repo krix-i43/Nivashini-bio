@@ -818,7 +818,7 @@ Made with 🤍 by <span>Nivashini</span>
 
 <!-- 🎥 Watch Tutorial -->
 <div class="help-fab">
-    <a href="https://https://youtube.com/shorts/7MzmoPxpcVU?si=YAFipIFm2tbgEOrn" target="_blank">
+    <a href="https://youtube.com/shorts/7MzmoPxpcVU?si=YAFipIFm2tbgEOrn" target="_blank">
         🎥 Watch Tutorial
     </a>
 </div>
