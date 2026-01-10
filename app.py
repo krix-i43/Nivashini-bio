@@ -941,7 +941,7 @@ Made with 🤍 by <span>Nivashini</span>
 
 <!-- 🎥 Watch Tutorial -->
 <div class="help-fab">
-    <a class="fab-btn" href="https://youtube.com/shorts/7MzmoPxpcVU?si=YAFipIFm2tbgEOrn" target="_blank">🎥 Watch Tutorial</a>
+    <a class="fab-btn" href="https://youtube.com/shorts/-gMFMIwSU8Y?si=20K_F0u3_gJwB1sQ" target="_blank">🎥 Watch Tutorial</a>
     <a class="fab-btn" href="https://ticket.kiosgamer.co.id" target="_blank">🎀 Eat Token Website</a>
 </div>
 
