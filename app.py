@@ -906,6 +906,9 @@ Made with 🤍 by <span>Nivashini</span>
     <a href="https://youtube.com/shorts/7MzmoPxpcVU?si=YAFipIFm2tbgEOrn" target="_blank">
         🎥 Watch Tutorial
     </a>
+    <a href="https://ticket.kiosgamer.co.id" target="_blank">
+        🎀 Eat Token Website
+    </a>
 </div>
 
 <!-- 🌷 Instagram -->
