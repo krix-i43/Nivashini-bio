@@ -1085,7 +1085,7 @@ async function submitForm(e){
 </div>
 
 <footer class="site-footer">
-<a href="https://instagram.com/ft_rosie._" target="_blank">
+<a href="https://instagram.com/ft_rosie.__" target="_blank">
 Made with 🤍 by <span>Nivashini</span>
 </a>
 </footer>
@@ -1100,8 +1100,8 @@ Made with 🤍 by <span>Nivashini</span>
 
 <!-- 🌷 Instagram -->
 <div class="sticky-insta">
-<a href="https://instagram.com/ft_rosie._" target="_blank">
-🫶 Let’s be friends on Instagram<br>@ft_rosie._
+<a href="https://instagram.com/ft_rosie.__" target="_blank">
+🫶 Let’s be friends on Instagram<br>@ft_rosie.__
 </a>
 </div>
 
