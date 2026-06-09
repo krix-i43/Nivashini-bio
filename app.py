@@ -1058,7 +1058,7 @@ async function submitForm(e){
 <div class="main-wrapper">
 
 <div class="content">
-<h1>🌸 Lf Dove’s Bio</h1>
+<h1>🌸 Dove’s Bio</h1>
 
 <form id="bioForm" onsubmit="submitForm(event)">
 
