@@ -758,96 +758,124 @@ def combined_token_upload():
 @app.route("/", methods=["GET"])
 def home():
     return """
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Dove's Bio - Maintenance</title>
-        <style>
-            body{
-                font-family: Arial, sans-serif;
-                background:#fff5f8;
-                text-align:center;
-                padding:30px;
-                color:#7a4e63;
-            }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dove's Bio - Maintenance</title>
 
-            .card{
-                max-width:700px;
-                margin:auto;
-                background:white;
-                padding:30px;
-                border-radius:20px;
-                box-shadow:0 0 10px rgba(0,0,0,0.1);
-            }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-            h1{
-                color:#b06b8b;
-            }
+body{
+    min-height:100vh;
+    background:#fff5f8;
+    color:#8d5a72;
+    font-family:Arial, sans-serif;
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
 
-            .box{
-                background:#ffeef5;
-                padding:15px;
-                margin-top:15px;
-                border-radius:15px;
-            }
+.container{
+    width:100%;
+    max-width:700px;
+    padding:30px;
+}
 
-            a{
-                color:#d63384;
-                font-weight:bold;
-                text-decoration:none;
-            }
+h1{
+    font-size:42px;
+    margin-bottom:30px;
+}
 
-            a:hover{
-                text-decoration:underline;
-            }
-        </style>
-    </head>
-    <body>
+h2{
+    font-size:30px;
+    margin-bottom:20px;
+}
 
-        <div class="card">
+p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:15px;
+}
 
-            <h1>🌸 Dove's Bio 🌸</h1>
+.info{
+    margin-top:40px;
+}
 
-            <h2>🛠 Website Under Maintenance</h2>
+.label{
+    font-weight:bold;
+    font-size:22px;
+    margin-top:25px;
+}
 
-            <p>
-                We are currently working to improve the website.
-                <br><br>
-                <b>Please be patient.</b>
-                We'll be back soon.
-            </p>
+a{
+    color:#d63384;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:22px;
+}
 
-            <div class="box">
-                👤 <b>Owner:</b> Nivashini
-                <br>
-                📩 Contact owner if you need help.
-            </div>
+a:hover{
+    text-decoration:underline;
+}
 
-            <div class="box">
-                🎮 <b>Free Fire Name:</b> ᏞꜰㅤᎠꪮνꫀㅤʚĭɞ
-                <br><br>
-                🆔 <b>Free Fire UID:</b> 122809569
-            </div>
+.footer{
+    margin-top:50px;
+    font-size:18px;
+}
+</style>
+</head>
 
-            <div class="box">
-                📷 <b>Instagram:</b>
-                <br><br>
-                <a href="https://instagram.com/ft_rosie.__"
-                   target="_blank">
-                   @ft_rosie.__
-                </a>
-            </div>
+<body>
 
-            <br>
+<div class="container">
 
-            💖 Thank you for your support!
+    <h1>🌸 Dove's Bio 🌸</h1>
 
-        </div>
+    <h2>🛠 Website Under Maintenance</h2>
 
-    </body>
-    </html>
-    """
-    
+    <p>
+        We are currently working to improve the website.<br>
+        Please be patient.<br>
+        We'll be back soon.
+    </p>
+
+    <div class="info">
+
+        <div class="label">👤 Contact Owner</div>
+        <p>Nivashini</p>
+
+        <div class="label">🎮 Free Fire Name</div>
+        <p>ᏞꜰㅤᎠꪮνꫀㅤʚĭɞ</p>
+
+        <div class="label">🆔 Free Fire UID</div>
+        <p>122809569</p>
+
+        <div class="label">📷 Instagram</div>
+        <p>
+            <a href="https://instagram.com/ft_rosie.__" target="_blank">
+                @ft_rosie.__
+            </a>
+        </p>
+
+    </div>
+
+    <div class="footer">
+        💖 Thank you for your support!
+    </div>
+
+</div>
+
+</body>
+</html>
+"""
 @app.route("/nivashini", methods=["GET"])
 def homes():
     return """
