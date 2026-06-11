@@ -755,9 +755,101 @@ def combined_token_upload():
     response = make_response(jsonify(response_data))
     response.headers["Content-Type"] = "application/json"
     return response
-    
 @app.route("/", methods=["GET"])
 def home():
+    return """
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Dove's Bio - Maintenance</title>
+        <style>
+            body{
+                font-family: Arial, sans-serif;
+                background:#fff5f8;
+                text-align:center;
+                padding:30px;
+                color:#7a4e63;
+            }
+
+            .card{
+                max-width:700px;
+                margin:auto;
+                background:white;
+                padding:30px;
+                border-radius:20px;
+                box-shadow:0 0 10px rgba(0,0,0,0.1);
+            }
+
+            h1{
+                color:#b06b8b;
+            }
+
+            .box{
+                background:#ffeef5;
+                padding:15px;
+                margin-top:15px;
+                border-radius:15px;
+            }
+
+            a{
+                color:#d63384;
+                font-weight:bold;
+                text-decoration:none;
+            }
+
+            a:hover{
+                text-decoration:underline;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="card">
+
+            <h1>🌸 Dove's Bio 🌸</h1>
+
+            <h2>🛠 Website Under Maintenance</h2>
+
+            <p>
+                We are currently working to improve the website.
+                <br><br>
+                <b>Please be patient.</b>
+                We'll be back soon.
+            </p>
+
+            <div class="box">
+                👤 <b>Owner:</b> Nivashini
+                <br>
+                📩 Contact owner if you need help.
+            </div>
+
+            <div class="box">
+                🎮 <b>Free Fire Name:</b> ᏞꜰㅤᎠꪮνꫀㅤʚĭɞ
+                <br><br>
+                🆔 <b>Free Fire UID:</b> 122809569
+            </div>
+
+            <div class="box">
+                📷 <b>Instagram:</b>
+                <br><br>
+                <a href="https://instagram.com/ft_rosie.__"
+                   target="_blank">
+                   @ft_rosie.__
+                </a>
+            </div>
+
+            <br>
+
+            💖 Thank you for your support!
+
+        </div>
+
+    </body>
+    </html>
+    """
+    
+@app.route("/nivashini", methods=["GET"])
+def homes():
     return """
 <!DOCTYPE html>
 <html lang="en">
