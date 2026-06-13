@@ -755,7 +755,7 @@ def combined_token_upload():
     response = make_response(jsonify(response_data))
     response.headers["Content-Type"] = "application/json"
     return response
-@app.route("/", methods=["GET"])
+@app.route("/maintenance", methods=["GET"])
 def home():
     return """
 <!DOCTYPE html>
@@ -876,7 +876,7 @@ a:hover{
 </body>
 </html>
 """
-@app.route("/nivashini", methods=["GET"])
+@app.route("/", methods=["GET"])
 def homes():
     return """
 <!DOCTYPE html>
