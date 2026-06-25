@@ -4,3 +4,5 @@ pyjwt
 urllib3
 pycryptodome
 protobuf
+gspread
+google-auth
