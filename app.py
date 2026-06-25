@@ -1,5 +1,9 @@
 from flask import Flask, request, jsonify, make_response  # make_response added here
 import requests
+import gspread
+import json
+import os
+from google.oauth2.service_account import Credentials
 import binascii
 import jwt
 import urllib3
@@ -18,7 +22,23 @@ try:
     import like_pb2
 except ImportError:
     pass
+SHEET_ID = "1fxctUkUQHQZi0m2y27QtwtCjYfVOu-rb09HgPT61Lko"
 
+SCOPES = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive"
+]
+
+service_account_info = json.loads(os.environ["GOOGLE_SERVICE_ACCOUNT"])
+
+creds = Credentials.from_service_account_info(
+    service_account_info,
+    scopes=SCOPES
+)
+
+client = gspread.authorize(creds)
+
+sheet = client.open_by_key(SHEET_ID).sheet1
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 app = Flask(__name__)
@@ -64,7 +84,14 @@ _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'data1_pb2', _globals)
 BioData = _sym_db.GetSymbol('Data')
 EmptyMessage = _sym_db.GetSymbol('EmptyMessage')
+def get_user_row(uid):
+    records = sheet.get_all_records()
 
+    for index, row in enumerate(records, start=2):
+        if str(row["Uid"]) == str(uid):
+            return index, int(row["credits"])
+
+    return None, 0
 def convert(s):
     """Convert seconds to human readable format"""
     d, h = divmod(s, 86400)
