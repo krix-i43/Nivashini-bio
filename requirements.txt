@@ -1,8 +1,7 @@
 flask
+gunicorn
 requests
-pyjwt
+PyJWT
 urllib3
 pycryptodome
 protobuf
-gspread
-google-auth
