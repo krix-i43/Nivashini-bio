@@ -1423,20 +1423,22 @@ Made with 🤍 by <span>Nivashini</span>
 </body>
 </html>
 """
-@app.route("/checkcredit", methods=["GET"])
+@app.route("/checkcredit")
 def check_credit():
 
-    uid = request.args.get("uid")
-
-    if not uid:
-        return "⚠️ Enter UID"
-
     try:
+
+        uid = request.args.get("uid")
+
+        if not uid:
+            return "UID missing"
+
         credits = get_user_credits(uid)
 
         return f"💎 Available Credits: {credits}"
 
-    except:
-        return "❌ Error checking credits"
+    except Exception as e:
+
+        return f"ERROR: {str(e)}"
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5021)
