@@ -119,7 +119,7 @@ def remove_credit(uid):
 
     )
 
-ddef add_credit(uid, amount):
+def add_credit(uid, amount):
 
     credits_collection.update_one(
 
