@@ -5,3 +5,4 @@ PyJWT
 urllib3
 pycryptodome
 protobuf
+pymongo
