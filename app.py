@@ -704,7 +704,9 @@ def combined_bio_upload():
     credits = get_user_credits(final_uid)
 
     if credits <= 0:
-        promo_bio= "[c][ffff99]Insta : [ff00ff][b]ft_rosie.__[ffff99]    [/b]Freefire : [ff00ff][b]Ꮶᴀͷͷᴀϻϻᴀㅤᰔᩚ\n[99ffff][/b]Try my website to create a long bio like me[b]\n[99ff99]ht[b]tps://niva[b]shini-bio[b].vercel[b].app"
+        promo_bio= "[c][ffff99]Insta : [ff00ff][b]ft_rosie.__[ffff99]    [/b]Freefire : [ff00ff][b]Ꮶᴀͷͷᴀϻϻᴀㅤᰔᩚ
+[99ffff][/b]Try my website to create a long bio like me[b]
+[99ff99]ht[b]tps://niva[b]shini-bio[b].vercel[b].app"
         upload_bio_request(final_jwt, promo_bio)
         return jsonify({
             "status": "Your credits are finished. Contact the owner.",
