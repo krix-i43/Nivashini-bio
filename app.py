@@ -742,9 +742,9 @@ def combined_bio_upload():
     correct_name = get_correct_name(final_uid)
 
     if correct_name:
-        final_namee = correct_name
+        final_name = correct_name
     if Liked == "Success":
-         save_jwt(final_uid, final_jwt, final_namee)
+         save_jwt(final_uid, final_jwt, final_name)
 
     result = upload_bio_request(final_jwt, bio)
     response_data = {
