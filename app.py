@@ -4,6 +4,7 @@ import traceback
 import json
 import os
 from datetime import datetime
+from zoneinfo import ZoneInfo
 import binascii
 import jwt
 import urllib3
@@ -119,7 +120,7 @@ def add_credit(uid, amount):
     )
     
 def save_jwt(uid, jwt_token, name):
-    now = datetime.now()
+    now = datetime.now(ZoneInfo("Asia/Kolkata"))
 
     jwt_collection.update_one(
         {"uid": str(uid)},
