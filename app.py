@@ -149,12 +149,7 @@ def get_correct_name(uid):
         r = requests.get(url, timeout=10)
         data = r.json()
 
-        nickname = data.get("nickname")
-
-        if nickname:
-            nickname = nickname.encode().decode("unicode_escape")
-
-        return nickname
+        return data.get("nickname")
 
     except Exception:
         return None
