@@ -1346,6 +1346,9 @@ Made with 🤍 by <span>Nivashini</span>
 </body>
 </html>
 """
+@app.route("/favicon.png")
+def favicon():
+    return "", 204
 @app.route("/checkcredit")
 def check_credit():
 
