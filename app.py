@@ -968,7 +968,7 @@ a:hover{
         <p>Nivashini</p>
 
         <div class="label">🎮 Free Fire Name</div>
-        <p>ᏞꜰㅤᎠꪮνꫀㅤʚĭɞ</p>
+        <p>Ꮶᴀͷͷᴀϻϻᴀㅤᰔᩚ</p>
 
         <div class="label">🆔 Free Fire UID</div>
         <p>122809569</p>
