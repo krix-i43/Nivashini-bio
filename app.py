@@ -307,6 +307,11 @@ def get_garena_data(eat_token):
         callback_url = f"https://api-otrss.garena.com/support/callback/?access_token={eat_token}"
         response = requests.get(callback_url, allow_redirects=False, timeout=10)
 
+        # Add these lines here
+        print(response.status_code)
+        print(response.headers)
+        print(response.text[:500])
+
         if 300 <= response.status_code < 400 and "Location" in response.headers:
             redirect_url = response.headers["Location"]
             parsed_url = urlparse(redirect_url)
@@ -322,7 +327,7 @@ def get_garena_data(eat_token):
         else:
             return {"error": "Invalid access token or session expired"}
     except Exception as e:
-        return f"Error occurred: {e}"
+        return f"Error occurred: {e}""
 
 def get_name_region_from_reward(access_token):
     try:
