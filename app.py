@@ -870,7 +870,7 @@ def add_credit_api():
         "credits": get_user_credits(uid)
     })
     
-@app.route("/maintenance", methods=["GET"])
+@app.route("/", methods=["GET"])
 def home():
     return """
 <!DOCTYPE html>
@@ -991,7 +991,7 @@ a:hover{
 </body>
 </html>
 """
-@app.route("/", methods=["GET"])
+@app.route("/maintenance", methods=["GET"])
 def homes():
     return """
 <!DOCTYPE html>
