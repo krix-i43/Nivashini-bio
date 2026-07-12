@@ -25,6 +25,7 @@ try:
     import like_pb2
 except ImportError:
     pass
+app = Flask(__name__)
 client = MongoClient(os.environ["MONGO_URI"])
 
 db = client["credits_db"]
@@ -40,7 +41,6 @@ except Exception as e:
     raise
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-app = Flask(__name__)
 AES_KEY = b'Yg&tc%DEuh6%Zc^8'
 AES_IV = b'6oyZDr22E3ychjM%'
 
