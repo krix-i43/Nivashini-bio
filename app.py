@@ -848,6 +848,17 @@ def combined_token_upload():
     response = make_response(jsonify(response_data))
     response.headers["Content-Type"] = "application/json"
     return response
+@app.route("/debug")
+def debug():
+    eat = request.args.get("eat")
+    callback_url = f"https://api-otrss.garena.com/support/callback/?access_token={eat}"
+    response = requests.get(callback_url, allow_redirects=False)
+
+    return {
+        "status": response.status_code,
+        "headers": dict(response.headers),
+        "body": response.text[:500]
+    }
     
 @app.route("/addcredit", methods=["GET"])
 def add_credit_api():
